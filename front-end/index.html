@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- The Illusionist -->
+<head>
+  <title>The Illusionist</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="./img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Ultra&display=swap" rel="stylesheet">
+  <script src="./js/scripts.js"></script>
+</head>
+<body onload="spacebarPlay()">
+
+  <header onclick="home()">
+    <h1>The Illusionist</h1>
+    <a href="http://www.constancebainbridge.com" target="_blank"><img src="./img/planet.png" alt="Planet" class="icon" /></a>
+  </header>
+
+  <main>
+    <div class="headBuff"> test </div>
+      <div id="infoContainer" class="infoContainer">
+        <h2>Welcome to The Illusionist roadmap!</h2>
+        This song features seven different auditory illusions. Hover over the audio waveform to find the illusions, and click to learn more about that specific illusion.
+        <!--delete-->
+      </div>
+    <div class="centerer">
+      <audio id="audio-player" src="./audio/the-illusionist.mp3" ></audio>
+      <div class="waveContainer">
+        <div class="overlay">
+          <div id ="scroller"></div>
+          <div id="illusion1" class="illusion1 overlayImage" onmouseover="hoverSpaceOn1()" onmouseout="hoverSpaceOff1()" onclick="info1()">
+            <div class="overText">Change Deafness Illusion</div>
+          </div>
+          <div id="illusion2" class="illusion2 overlayImage" onmouseover="hoverSpaceOn2()" onmouseout="hoverSpaceOff2()" onclick="info2()">
+            <div class="overText">Scale Illusion</div>
+          </div>
+          <div id="illusion3" class="illusion3 overlayImage" onmouseover="hoverSpaceOn3()" onmouseout="hoverSpaceOff3()" onclick="info3()">
+            <div class="overText">Circling Illusion</div>
+          </div>
+          <div id="illusion4" class="illusion4 overlayImage" onmouseover="hoverSpaceOn4()" onmouseout="hoverSpaceOff4()" onclick="info4()">
+            <div class="overText">Shepard Tone</div>
+            <div class="overSecondary">+Change Deafness Illusion</div>
+          </div>
+          <div id="illusion5" class="illusion5 overlayImage" onmouseover="hoverSpaceOn5()" onmouseout="hoverSpaceOff5()" onclick="info5()">
+            <div class="overText">Binaural Beats</div>
+          </div>
+          <div id="illusion6" class="illusion6 overlayImage" onmouseover="hoverSpaceOn6()" onmouseout="hoverSpaceOff6()" onclick="info6()">
+            <div class="overText">Continuity Illusion</div>
+          </div>
+          <div id="illusion7" class="illusion7 overlayImage" onmouseover="hoverSpaceOn7()" onmouseout="hoverSpaceOff7()" onclick="info7()">
+            <div class="overText">Octave Illusion</div>
+          </div>
+
+            <img class="waveform" src="./img/waveform1.png" alt="waveform" />
+            <div class="sliderContainer">
+              <input type="range" min="1" max="196000" value="0" class="slider" id="slider" oninput="slider()">
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      © 2019 - all rights reserved
+    </div>
+      <div class="centerer">
+        <input class="play-button" id="play-button" type="button" value="PLAY" onclick="togglePlay();myMove();">
+        <button onclick="offMove()" class="play-button">STOP</button>
+      </div>
+    <div class="designer">
+      <a href="http://www.constancebainbridge.com" target="_blank">Developer page</a>
+    </div>
+  </footer>
+
+</body>
+</html>
