@@ -148,6 +148,13 @@ function home() {
     '<li><span onclick="info6();hoverSpaceOn6()" class="linkList">Continuity Illusion</span></li>'+
     '<li><span onclick="info7();hoverSpaceOn7()" class="linkList">Octave Illusion</span></li>'+
   '</ul>';
+  scrollTop();
+}
+
+function scrollTop() {
+  var elmnt = document.getElementById("infoContainer");
+  elmnt.scrollLeft = 0;
+  elmnt.scrollTop = 0;
 }
 
 // infoContainer info1 - change deafness
@@ -159,6 +166,7 @@ function info1() {
     '<ul>'+
       '<li>Try scrolling around in time in these sections: you may be able to hear more clearly how much the pitches really are different!</li>'+
     '</ul>';
+  scrollTop();
 }
 
 // infoContainer info2 - Scale Illusion
@@ -171,6 +179,7 @@ function info2() {
       '<li>Wearing headphones? Try taking one ear on and off to hear how the notes go from all over the place to fitting into the scale neatly.</li>'+
       '<li>This and several of the illusions used in this song were discovered by <a href="http://deutsch.ucsd.edu/psychology/pages.php?i=201" target="_blank">Diana Deutsche</a>.</li>'+
     '</ul>';
+  scrollTop();
 }
 
 // infoContainer info3 - Circling Illusion
@@ -183,6 +192,7 @@ function info3() {
       '<li>Does it sound like the sound is moving clockwise around you? ...or counter-clockwise?</li>'+
       '<li>Like to read technical-jargon in research papers? I have <a href="https://www.frontiersin.org/articles/10.3389/fnhum.2014.01060/full" target="_blank">a paper</a> on a similar auditory illusion that also plays on a weakness in our spatial auditory perception.</li>'+
     '</ul>';
+  scrollTop();
 }
 
 // infoContainer info4 - Shepard tone
@@ -201,6 +211,7 @@ function info4() {
       '<ul>'+
         '<li>Try scrolling around in time in these sections: you may be able to hear more clearly how much the pitches really are different!</li>'+
       '</ul>';
+  scrollTop();
 }
 
 // infoContainer info5 - Binaural Beats
@@ -213,6 +224,7 @@ function info5() {
       '<li>To get the best effect, try listening with headphones! Listen to the individual tones by isolating each ear.'+
       '<li>Binaural beats are thought by some to have hypnotic capabilities. Different frequencies are thought to encourage different psychological benefits like calming anxiety, aiding in focus, or even inducing <a href="https://en.wikipedia.org/wiki/Lucid_dream" target="_blank">lucid dreaming.</a></li>'+
     '</ul>';
+  scrollTop();
 }
 
 // infoContainer info6 - Continuity illusion
@@ -220,7 +232,8 @@ function info6() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Continuity Illusion</h2> '+
   '<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">(home)</span><br/><br/>'+
-  'A rhythmic higher tone plays with white noise between it. As the white noise gets louder, the rhythmic tone seems to become continuous. The image below shows a visual illusion that follow the same idea:'
+  'A rhythmic higher tone plays with white noise between it. As the white noise gets louder, the rhythmic tone seems to become continuous. The image below shows a visual illusion that follow the same idea:';
+  scrollTop();
 }
 
 // infoContainer info7 - Binaural Beats
@@ -233,6 +246,7 @@ function info7() {
       '<li>To get the best effect, try listening with headphones! Listen to the individual tones by isolating each ear.'+
       '<li>Does it sound like the higher pitch is only in the right? Only in the left? In Both ears? Alternating?</li>'+
     '</ul>';
+  scrollTop();
 }
 
 //illusion1

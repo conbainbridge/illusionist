@@ -66,6 +66,7 @@ hr {
   width: 700px;
   margin-top: 15px;
   margin-bottom: 15px;
+  border-style: dashed;
 }
 .icon {
   position: fixed;
