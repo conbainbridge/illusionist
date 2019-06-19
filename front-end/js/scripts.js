@@ -147,7 +147,8 @@ function home() {
     '<li><span onclick="info5();hoverSpaceOn5()" class="linkList">Binaural Beats</span></li>'+
     '<li><span onclick="info6();hoverSpaceOn6()" class="linkList">Continuity Illusion</span></li>'+
     '<li><span onclick="info7();hoverSpaceOn7()" class="linkList">Octave Illusion</span></li>'+
-  '</ul>';
+  '</ul>'+
+  '<br/>If you enjoyed the song, it\'s available <a href="https://meiohara.bandcamp.com/track/the-illusionist" target="_blank">here</a>.';
   scrollTop();
 }
 
