@@ -1,3 +1,6 @@
+/* Style for Illusionist road map */
+
+/* Global */
 html, body {
   height: 100%;
 }
@@ -13,6 +16,16 @@ a {
   color: white;
 }
 a:hover {
+  color: #DEB014;
+  text-decoration: underline;
+  transition: 1s;
+}
+
+.linkList {
+  cursor: pointer;
+}
+.linkList:hover {
+  cursor: pointer;
   color: #DEB014;
   text-decoration: underline;
   transition: 1s;
@@ -91,6 +104,45 @@ main {
   text-align: center;
 }
 
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 6;
+}
+.copyright {
+  bottom: 15px;
+  left: 15px;
+  position: fixed;
+}
+.designer {
+  bottom: 15px;
+  right: 15px;
+  position: fixed;
+}
+@media (max-width: 1142px) {
+  .copyright {
+    visibility: hidden;
+  }
+  .designer {
+    visibility: hidden;
+  }
+}
+@media (max-height: 330px) {
+  .copyright {
+    visibility: hidden;
+  }
+  .designer {
+    visibility: hidden;
+  }
+}
+
+/* Player */
+.timeStamp {
+  font-size: 26px;
+  display: inline;
+}
 .play-button {
   background-color: #DC6C09;
   color: white;
@@ -116,6 +168,55 @@ main {
   outline:0;
 }
 
+.waveContainer {
+  padding-top: 30px;
+  height: 250px;
+  z-index: 5;
+}
+.waveform {
+  width: 1400px;
+  height: 100%;
+}
+
+#scroller {
+  width: 5px;
+  height: 100%;
+  margin-left: 5px;
+  position: absolute;
+  background-color: white;
+  z-index: 3;
+}
+
+.sliderContainer {
+  margin-left: -5px;
+  width: 1400px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 1400px;
+  height: 5px;
+  outline: none;
+  background: #05B9C5;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  margin-left: -5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Illusion info */
 .infoContainer {
   background-color: #DC6C09;
   line-height: 24px;
@@ -123,21 +224,8 @@ main {
   padding: 15px;
   margin-top: 15px;
   bottom: 65px;
-  height: 20%;
-  max-height: 150px;
+  height: 150px;
   overflow: scroll;
-}
-
-.waveContainer {
-  padding-top: 50px;
-  height: 40%;
-  position: absolute;
-  bottom: 110px;
-}
-
-.waveform {
-  width: 1400px;
-  height: 100%;
 }
 
 .overlay {
@@ -218,69 +306,4 @@ main {
   opacity: 0;
   font-size: 28px;
   position: absolute;
-}
-
-#scroller {
-  width: 5px;
-  height: 100%;
-  margin-left: 5px;
-  position: absolute;
-  background-color: white;
-  z-index: 3;
-}
-
-/* time slider for custom player */
-.sliderContainer {
-  margin-left: -5px;
-  width: 1400px;
-}
-.slider {
-  -webkit-appearance: none;
-  width: 1400px;
-  height: 5px;
-  outline: none;
-  background: #05B9C5;
-}
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  cursor: pointer;
-  border-radius: 50%;
-}
-.slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  margin-left: -5px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  position: fixed;
-}
-.copyright {
-  bottom: 15px;
-  left: 15px;
-  position: fixed;
-}
-.designer {
-  bottom: 15px;
-  right: 15px;
-  position: fixed;
-}
-
-@media (max-width: 1142px) {
-  .copyright {
-    visibility: hidden;
-  }
-  .designer {
-    visibility: hidden;
-  }
 }

@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Ultra&display=swap" rel="stylesheet">
   <script src="./js/scripts.js"></script>
 </head>
-<body onload="spacebarPlay()">
+<body onload="spacebarPlay();home();isMobile()">
 
   <header onclick="home()">
     <h1>The Illusionist</h1>
@@ -18,12 +18,13 @@
   <main>
     <div class="headBuff"> test </div>
       <div id="infoContainer" class="infoContainer">
-        <h2>Welcome to The Illusionist roadmap!</h2>
-        This song features seven different auditory illusions. Hover over the audio waveform to find the illusions, and click to learn more about that specific illusion.
-        <!--delete-->
+      </div>
+      <div class="centerer" style="padding-top:30px;">
+        <span id="timeStamp" class="timeStamp">0:00
+        </span><span class="timeStamp" style="display:inline">/ 3:15</span>
       </div>
     <div class="centerer">
-      <audio id="audio-player" src="./audio/the-illusionist.mp3" ></audio>
+      <audio id="audio-player" preload="auto" src="./audio/the-illusionist.mp3" onended="completeAudio()" ontimeupdate="timeStamp()"></audio>
       <div class="waveContainer">
         <div class="overlay">
           <div id ="scroller"></div>
@@ -49,7 +50,6 @@
           <div id="illusion7" class="illusion7 overlayImage" onmouseover="hoverSpaceOn7()" onmouseout="hoverSpaceOff7()" onclick="info7()">
             <div class="overText">Octave Illusion</div>
           </div>
-
             <img class="waveform" src="./img/waveform1.png" alt="waveform" />
             <div class="sliderContainer">
               <input type="range" min="1" max="196000" value="0" class="slider" id="slider" oninput="slider()">
