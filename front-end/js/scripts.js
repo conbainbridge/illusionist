@@ -54,7 +54,7 @@ function myMove() { // move and pause scroller
     if (audioElement.paused){ // pause behavior
       timerThing = audioElement.currentTime;
       timerThing2 = timerThing.toFixed(0);
-      progSpot = (timerThing2*1000)/142//140
+      progSpot = (timerThing2*1000)/142
       progSpot2 = progSpot.toFixed(0);
       console.log(progSpot2);
       clearInterval(id);
@@ -62,9 +62,7 @@ function myMove() { // move and pause scroller
       pos++;
       overall = Number(progSpot2)+Number(pos);
       scroller.style.left = overall + 'px';
-      //console.log(overall);
       audioTime = overall*142;
-      //console.log(audioTime);
       document.getElementById("slider").value = audioTime;
       if (audioTime == 196000 || progSpot2 == 1400) {
         offMove();
@@ -121,7 +119,7 @@ function slider() {
   }
 }
 
-// infoContainer home
+// timestamp
 function timeStamp() {
   var audioElement = document.getElementById("audio-player");
   var secs = parseInt(audioElement.currentTime % 60);
@@ -158,7 +156,7 @@ function scrollTop() {
   elmnt.scrollTop = 0;
 }
 
-// infoContainer info1 - change deafness
+// infoContainer info1 - Change Deafness
 function info1() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Change Deafness</h2> '+
@@ -196,7 +194,7 @@ function info3() {
   scrollTop();
 }
 
-// infoContainer info4 - Shepard tone
+// infoContainer info4 - Shepard Tone
 function info4() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Shepard Tone</h2> '+
@@ -228,7 +226,7 @@ function info5() {
   scrollTop();
 }
 
-// infoContainer info6 - Continuity illusion
+// infoContainer info6 - Continuity Illusion
 function info6() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Continuity Illusion</h2> '+
