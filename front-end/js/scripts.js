@@ -1,9 +1,9 @@
 /* JS for illusionist */
 
-function isMobile() {
+function mobilePort() {
   var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-  if (mobile) {
-    alert("This site is not optimized for mobile devices - yet!");
+  if (mobile && Math.abs(window.orientation) === 90) {
+    alert("Please rotate your device to be in portrait mode!");
   }
 };
 
@@ -160,7 +160,7 @@ function scrollTop() {
 function info1() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Change Deafness</h2> '+
-  '<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">(home)</span><br/><br/>'+
+  '(<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">home</span>)<br/><br/>'+
   'This section slowly and gradually slides up in pitch by a whole note, then resets to the original pitches and does it a second time. The pitch changes so gradually it may be hard to even realize the pitches are changing! Ignoring the pitch changes, the chord progression is a simple: \'i-iv,\' but because the pitch resets after the first sequence, the transition cadence transforms from iv-i to v-i.'+
     '<ul>'+
       '<li>Try scrolling around in time in these sections: you may be able to hear more clearly how much the pitches really are different!</li>'+
@@ -172,7 +172,7 @@ function info1() {
 function info2() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Scale Illusion</h2> '+
-  '<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">(home)</span><br/><br/>'+
+  '(<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">home</span>)<br/><br/>'+
   'A descending and ascending scale-like pattern is bounced between left and right ears, but seems to be continuous because our brains love patterns.'+
     '<ul>'+
       '<li>Wearing headphones? Try taking one ear on and off to hear how the notes go from all over the place to fitting into the scale neatly.</li>'+
@@ -185,7 +185,7 @@ function info2() {
 function info3() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Circling Illusion</h2> '+
-  '<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">(home)</span><br/><br/>'+
+  '(<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">home</span>)<br/><br/>'+
   'The bass sound moves between the right and left ears, and changes slightly in volume, making it seem to circle around you.'+
     '<ul>'+
       '<li>Does it sound like the sound is moving clockwise around you? ...or counter-clockwise?</li>'+
@@ -198,7 +198,7 @@ function info3() {
 function info4() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Shepard Tone</h2> '+
-  '<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">(home)</span><br/><br/>'+
+  '(<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">home</span>)<br/><br/>'+
   'This tone, sliding gradually up in pitch, continues going up forever. This is because of the complexity of the sound: there are multiple octaves played at once, so as the higher octaves become too high, the next octave below is there below to take its place. A new low octave comes in when the lowest octave has moved high enough to make space for it.'+
     '<ul>'+
       '<li>Fun fact! In the video game \'Mario 64\' for Nintendo 64, the music that plays when you go up the endless staircase is designed on this illusion: if you listen you\'ll find that the music never stops seeming to get higher and higher!</li>'+
@@ -217,7 +217,7 @@ function info4() {
 function info5() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Binaural Beats</h2> '+
-  '<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">(home)</span><br/><br/>'+
+  '(<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">home</span>)<br/><br/>'+
   'Pure tones are played in both the left and right ear, but are slightly different in pitch. If you listen carefully, it will seem as if there is rhythmic \'beating\' in these pure tones.'+
     '<ul>'+
       '<li>To get the best effect, try listening with headphones! Listen to the individual tones by isolating each ear.'+
@@ -230,7 +230,7 @@ function info5() {
 function info6() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Continuity Illusion</h2> '+
-  '<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">(home)</span><br/><br/>'+
+  '(<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">home</span>)<br/><br/>'+
   'A rhythmic higher tone plays with white noise between it. As the white noise gets louder, the rhythmic tone seems to become continuous. The image below shows a visual illusion that follow the same idea:';
   scrollTop();
 }
@@ -239,9 +239,9 @@ function info6() {
 function info7() {
   document.getElementById("infoContainer").innerHTML = '';
   document.getElementById("infoContainer").innerHTML = '<h2>Octave Illusion</h2> '+
-  '<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">(home)</span><br/><br/>'+
+  '(<span onclick="home();hoverSpaceOff1();hoverSpaceOff2();hoverSpaceOff3();hoverSpaceOff4();hoverSpaceOff5();hoverSpaceOff6();hoverSpaceOff7();" class="linkList">home</span>)<br/><br/>'+
   'The first bar here plays a low-high-low-high octave pattern in the left ear. This pattern continues in the next two bars, but the opposite (high-low-high-low) is played in the left ear.'+
-    '<ul class="linkList">'+
+    '<ul>'+
       '<li>To get the best effect, try listening with headphones! Listen to the individual tones by isolating each ear.'+
       '<li>Does it sound like the higher pitch is only in the right? Only in the left? In Both ears? Alternating?</li>'+
     '</ul>';

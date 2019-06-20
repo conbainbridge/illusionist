@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Ultra&display=swap" rel="stylesheet">
   <script src="./js/scripts.js"></script>
 </head>
-<body onload="spacebarPlay();home();isMobile()">
+<body onload="spacebarPlay();home();mobilePort()">
 
   <header onclick="home()">
     <h1>The Illusionist</h1>
@@ -63,12 +63,15 @@
     <div class="copyright">
       © 2019 - all rights reserved
     </div>
-      <div class="centerer">
+    <div class="designer">
+      <a href="http://www.constancebainbridge.com" target="_blank">Developer page</a>
+    </div>
+    <div class="mobBuffer">&nbsp;</div>
+    <div class="centerer">
+      <div class="mobFoot">
         <input class="play-button" id="play-button" type="button" value="PLAY" onclick="togglePlay();myMove();">
         <button onclick="offMove()" class="play-button">STOP</button>
       </div>
-    <div class="designer">
-      <a href="http://www.constancebainbridge.com" target="_blank">Developer page</a>
     </div>
   </footer>
 

@@ -1,14 +1,10 @@
 /* Style for Illusionist road map */
 
 /* Global */
-html, body {
-  height: 100%;
-}
 body {
   background-color: #CD3E37;
   color: white;
-  margin-top: -15px;
-  margin-bottom: -15px;
+  margin: 0px;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -34,12 +30,11 @@ a:hover {
 header {
   background-color: #DC6C09;
   width: 100%;
-  height: 80px;
+  height: 90px;
   text-align: center;
   position: fixed;
   vertical-align: middle;
-  padding: 0px 500px 10px 15px;
-  margin-left: -15px;
+  padding: 0px;
   z-index: 4;
   overflow: inherit;
 }
@@ -51,7 +46,7 @@ header h1:hover {
   transition: 1s;
 }
 h1 {
-  margin: 0px 0px 0px -15px;
+  margin: 0px;
   color: white;
   padding: 15px;
   font-size: 48px;
@@ -88,7 +83,7 @@ hr {
 }
 @media (max-width: 666px) {
   .icon {
-    visibility: hidden;
+    display: none;
   }
 }
 .headBuff {
@@ -98,7 +93,7 @@ hr {
 }
 
 main {
-  margin: 15px;
+  padding: 15px;
 }
 
 .centerer {
@@ -106,7 +101,6 @@ main {
 }
 
 footer {
-  position: absolute;
   bottom: 0px;
   width: 100%;
   position: fixed;
@@ -124,19 +118,22 @@ footer {
 }
 @media (max-width: 1142px) {
   .copyright {
-    visibility: hidden;
+    display: none;
   }
   .designer {
-    visibility: hidden;
+    display: none;
   }
 }
 @media (max-height: 330px) {
   .copyright {
-    visibility: hidden;
+    display: none;
   }
   .designer {
-    visibility: hidden;
+    display: none;
   }
+}
+.mobBuffer {
+  display: none;
 }
 
 /* Player */
@@ -223,7 +220,6 @@ footer {
   line-height: 24px;
   display: block;
   padding: 15px;
-  margin-top: 15px;
   bottom: 65px;
   height: 150px;
   overflow: scroll;
@@ -307,4 +303,97 @@ footer {
   opacity: 0;
   font-size: 28px;
   position: absolute;
+}
+
+
+/* Mobile */
+@media only screen and (orientation: portrait) {
+  .infoContainer {
+    width: 95%;
+    margin-left: 8px;
+    margin-right: 10px;
+    height: 400px;
+    font-size: 30px;
+    line-height: 36px;
+    overflow: scroll;
+  }
+  header {
+    height: 150px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 8vw;
+  }
+  h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .icon {
+    display: none;
+  }
+  .icon:hover {
+    display: none;
+  }
+  .headBuff {
+    height: 165px;
+  }
+  .mobFoot {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+  }
+  .play-button {
+    font-size: 80px;
+    width: 400px;
+    margin: 0;
+    border-radius: 10px 10px 10px 10px;
+    display: inline;
+  }
+  .play-button:hover {
+    font-size: 80px;
+    width: 400px;
+    margin: 0;
+    border-radius: 10px 10px 10px 10px;
+    display: inline;
+  }
+
+  .waveContainer {
+    width: 99%;
+    height: inherit;
+    overflow: scroll;
+  }
+  .mobBuffer {
+    visibility: visible;
+    background-color: #CD3E37;
+  }
+  .timeStamp {
+    font-size: 100px;
+  }
+  .copyright {
+    visibility: visible;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    display: block;
+    position: static;
+    font-size: 50px;
+    margin-top: 100px;
+  }
+  .designer {
+    visibility: visible;
+    bottom: auto;
+    right: auto;
+    text-align: center;
+    display: block;
+    position: static;
+    font-size: 50px;
+  }
+  footer {
+    position: absolute;
+    bottom: 200px;
+  }
+  .linkList {
+    text-decoration: underline;
+    line-height: 56px;
+  }
 }
