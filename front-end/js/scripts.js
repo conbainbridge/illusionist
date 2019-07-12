@@ -1,4 +1,6 @@
 /* JS for illusionist */
+var audioElement = document.getElementById("audio-player");
+var scroller = document.getElementById("scroller");
 
 function mobilePort() {
   var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
@@ -10,7 +12,6 @@ function mobilePort() {
 // player
 function spacebarPlay() { // spacebar to toggle play/pause
   window.addEventListener('keydown', function (event) {
-    var audioElement = document.getElementById("audio-player");
     var key = event.which || event.keyCode;
     if (key === 32 && audioElement.paused == true) {
       audioElement.play();
@@ -26,7 +27,6 @@ function spacebarPlay() { // spacebar to toggle play/pause
   })
 };
 function togglePlay() { //button toggle play/pause
-  var audioElement = document.getElementById("audio-player");
     if (audioElement.paused) {
       audioElement.play();
       document.getElementById("play-button").value = 'PAUSE';
@@ -38,15 +38,12 @@ function togglePlay() { //button toggle play/pause
 };
 function completeAudio() { // button behavior when audio ends
   document.getElementById("play-button").value = 'PLAY';
-  var sliderVal = document.getElementById("slider").value;
     offMove();
 };
 
 var progSpot2 =  0;
 
 function myMove() { // move and pause scroller
-  var scroller= document.getElementById("scroller");
-  var audioElement = document.getElementById("audio-player");
   var sliderVal = document.getElementById("slider").value;
   var pos = 0;
   var id = setInterval(frame, 140);
@@ -79,18 +76,15 @@ function myMove() { // move and pause scroller
   }
 }
 function offMove() { // stop audio and move scroller to start
-  var audioElement = document.getElementById("audio-player");
   audioElement.pause();
   audioElement.currentTime = 0;
   document.getElementById("play-button").value = 'PLAY';
-  var scroller= document.getElementById("scroller");
   var slider= document.getElementById("slider");
   var pos = 0;
   var progSpot2 = 0;
   var id = setInterval(frame, 140);
   function frame() {
     if (audioElement.paused){
-      var scroller= document.getElementById("scroller");
       var slider= document.getElementById("slider");
       clearInterval(id);
       progSpot2 = 0;
@@ -104,8 +98,6 @@ function offMove() { // stop audio and move scroller to start
 var sliderPos;
 function slider() {
   var sliderVal = document.getElementById("slider").value;
-  var audioElement = document.getElementById("audio-player");
-  var scroller= document.getElementById("scroller");
   if (sliderVal <= 196000) {
     audioElement.pause();
     sliderPos = sliderVal/1000; // conversion msecs -> secs
@@ -121,7 +113,6 @@ function slider() {
 
 // timestamp
 function timeStamp() {
-  var audioElement = document.getElementById("audio-player");
   var secs = parseInt(audioElement.currentTime % 60);
   var mins = parseInt((audioElement.currentTime / 60) % 60);
   if (secs < 10) {
@@ -129,7 +120,7 @@ function timeStamp() {
     document.getElementById("timeStamp").innerHTML = mins + ':0' + secs + ' ';
   } else {
     document.getElementById("timeStamp").innerHTML = '';
-    document.getElementById("timeStamp").innerHTML =mins + ':' + secs + ' ';
+    document.getElementById("timeStamp").innerHTML = mins + ':' + secs + ' ';
   }
 };
 
