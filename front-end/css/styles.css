@@ -94,8 +94,6 @@ hr {
 
 main {
   padding: 15px;
-  height: 700px;
-  overflow: scroll;
 }
 
 .centerer {
@@ -171,12 +169,15 @@ footer {
 
 .waveContainer {
   padding-top: 30px;
-  height: 250px;
+  height: 275px;
+  overflow-x: scroll;
+  overflow-y: visible;
+  padding: 15px 10px;
   z-index: 5;
 }
 .waveform {
   width: 1400px;
-  height: 100%;
+  height: 220px;
 }
 
 #scroller {
@@ -225,24 +226,17 @@ footer {
   padding: 15px;
   bottom: 65px;
   height: 150px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .overlay {
   position: relative;
-  height: 100%;
+  height: 220px;
   z-index: 2;
 }
 .overText {
   font-size: 18px;
   padding: 5px;
-  opacity: 1.5;
-}
-.overSecondary {
-  font-size: 16px;
-  padding: 5px;
-  opacity: 1.5;
-  color: #DEB014;
 }
 .overlayImage {
   background-image: url("../img/question.png");
@@ -289,18 +283,6 @@ footer {
   width: 82px;
   display: inline;
 }
-.illusion6 .overText {
-  font-size: 18px;
-  margin-top: -50px;
-  padding: 5px;
-  opacity: 1.5;
-}
-.illusion7 .overText {
-  font-size: 18px;
-  margin-top: -50px;
-  padding: 5px;
-  opacity: 1.5;
-}
 
 #illusion1, #illusion2, #illusion3, #illusion4, #illusion5, #illusion6, #illusion7 {
   opacity: 0;
@@ -340,60 +322,47 @@ footer {
   .headBuff {
     height: 165px;
   }
-  .mobFoot {
-    position: fixed;
+  .waveContainer {
+    margin-bottom: 200px;
+  }
+  footer {
+    bottom: 200px;
     width: 100%;
-    bottom: 0px;
+    height: 10%;
+    position: fixed;
+    z-index: 6;
   }
   .play-button {
-    font-size: 80px;
-    width: 400px;
+    font-size: 8vw;
+    width: 25%;
     margin: 0;
     border-radius: 10px 10px 10px 10px;
     display: inline;
   }
   .play-button:hover {
-    font-size: 80px;
-    width: 400px;
+    font-size: 8vw;
+    width: 25%;
     margin: 0;
     border-radius: 10px 10px 10px 10px;
     display: inline;
-  }
-
-  .waveContainer {
-    width: 99%;
-    height: inherit;
-    overflow: scroll;
-  }
-  .mobBuffer {
-    visibility: visible;
-    background-color: #CD3E37;
   }
   .timeStamp {
     font-size: 100px;
   }
   .copyright {
     visibility: visible;
-    bottom: auto;
-    left: auto;
     text-align: center;
     display: block;
     position: static;
     font-size: 50px;
-    margin-top: 100px;
   }
   .designer {
     visibility: visible;
-    bottom: auto;
-    right: auto;
     text-align: center;
     display: block;
     position: static;
     font-size: 50px;
-  }
-  footer {
-    position: absolute;
-    bottom: 200px;
+    margin-bottom: 15px;
   }
   .linkList {
     text-decoration: underline;
